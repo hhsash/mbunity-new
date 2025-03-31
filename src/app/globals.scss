@@ -1,0 +1,32 @@
+@import 'tailwindcss';
+@import '../styles/_variables.scss';
+
+body {
+    background: #fbfbfb;
+    color: #000000;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 24px;
+    }
+}
+h2 {
+    font-size: 34px;
+}
+h3 {
+    font-size: 28px;
+}
+h4 {
+    font-size: 22px;
+}
+h5 {
+    font-size: 18px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

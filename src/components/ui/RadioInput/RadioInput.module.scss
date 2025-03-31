@@ -1,0 +1,37 @@
+.radioInputWrapper {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:hover {
+        .radioInputLabel {
+            opacity: 0.7;
+        }
+    }
+
+    .radioInputLabel {
+        cursor: pointer;
+        transition: all 0.2s linear;
+    }
+
+    .radioInput {
+        appearance: none;
+        width: 13px;
+        height: 13px;
+        background: #e0e0e0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s linear;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        &:checked {
+            background: url('../../../assets/icons/radio_input_checked.svg');
+        }
+    }
+}

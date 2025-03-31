@@ -1,0 +1,87 @@
+@import '../../styles/_variables.scss';
+
+.contactForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    @media (max-width: $breakpoint-xs) {
+        gap: 25px;
+    }
+
+    .contactForm__inputsGroup {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 45px;
+
+        @media (max-width: $breakpoint-md) {
+            grid-template-columns: repeat(1, 1fr);
+            grid-row-gap: 20px;
+        }
+    }
+
+    .contactForm__submitBtn {
+        width: 214px;
+        margin-left: auto;
+        z-index: 2;
+        text-transform: capitalize;
+        box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.12);
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 22px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+
+        @media (max-width: $breakpoint-md) {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+            width: 100%;
+        }
+    }
+
+    .radioGroup {
+        &__title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 14px;
+
+            @media (max-width: $breakpoint-sm) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            @media (max-width: $breakpoint-sm) {
+                row-gap: 14px;
+                column-gap: 20px;
+            }
+        }
+
+        &__item {
+            @media (max-width: $breakpoint-hd) {
+                flex-basis: 45%;
+            }
+        }
+    }
+}

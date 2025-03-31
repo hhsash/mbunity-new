@@ -1,0 +1,148 @@
+@import '../../../styles/_variables.scss';
+
+.header {
+    @media (max-width: $breakpoint-md) {
+        box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__overlay {
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 500;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s linear;
+
+        &--open {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &,
+    &__content {
+        padding: 40px 100px;
+
+        @media (max-width: $breakpoint-lg) {
+            padding: 40px 60px;
+        }
+
+        @media (max-width: $breakpoint-md) {
+            padding: 28px 40px 30px;
+        }
+
+        @media (max-width: $breakpoint-xs) {
+            padding: 28px 20px 30px;
+        }
+    }
+
+    &__content {
+        background: #000;
+        color: #fff;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 476px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.2s linear;
+
+        &--open {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1240px;
+    }
+
+    &__logo {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        @media (max-width: $breakpoint-md) {
+            display: none;
+            flex-direction: column;
+        }
+    }
+
+    &__menu-btn {
+        display: none;
+
+        @media (max-width: $breakpoint-md) {
+            display: block;
+        }
+    }
+
+    .nav {
+        &__links {
+            display: flex;
+            gap: 47px;
+            font-family: 'Roboto';
+
+            @media (max-width: $breakpoint-md) {
+                flex-direction: column;
+                gap: 30px;
+                font-size: 14px;
+                padding-left: 3px;
+            }
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #1f1f1f;
+            width: fit-content;
+            line-height: 16px;
+            transition: all linear 0.2s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+
+            @media (max-width: $breakpoint-md) {
+                color: #fff;
+            }
+        }
+
+        &__icons {
+            display: flex;
+            gap: 36px;
+
+            @media (max-width: $breakpoint-md) {
+                margin-top: 60px;
+                justify-content: center;
+            }
+        }
+
+        &__icon {
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all linear 0.2s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
