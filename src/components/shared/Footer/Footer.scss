@@ -104,6 +104,7 @@
 
         @media (max-width: $breakpoint-sm) {
             margin-top: 10px;
+            padding: 17px 14px 20px;
         }
     }
 
@@ -254,6 +255,7 @@
         }
 
         &__note {
+            width: 85%;
             font-family: 'Manrope';
             font-size: 13px;
             opacity: 0.5;

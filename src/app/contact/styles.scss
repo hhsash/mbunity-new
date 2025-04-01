@@ -30,7 +30,12 @@
 
         @media (max-width: $breakpoint-xs) {
             gap: 30px;
+            padding: 5px;
         }
+    }
+
+    &__title {
+        margin-bottom: 10px;
     }
 
     &__subtitle {
@@ -50,14 +55,14 @@
     }
 
     &__form {
-        padding: 50px 50px 142px 0;
+        padding: 50px 40px 142px 0;
 
         @media (max-width: $breakpoint-md) {
             padding: 0 20px 65px;
         }
 
         @media (max-width: $breakpoint-xs) {
-            padding: 0 10px 65px;
+            padding: 0 16px 65px;
         }
 
         &::after {
@@ -71,7 +76,7 @@
             right: 140px;
 
             @media (max-width: $breakpoint-md) {
-                transform: scale(0.5);
+                scale: 0.5;
                 bottom: -28px;
                 right: calc(50% - 75px);
             }
@@ -88,7 +93,7 @@
         overflow: hidden;
 
         @media (max-width: $breakpoint-hd) {
-            padding-right: 100px;
+            padding-right: 80px;
         }
 
         @media (max-width: $breakpoint-md) {

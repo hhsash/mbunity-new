@@ -33,7 +33,7 @@
         color: white;
         border: none;
         border-radius: 5px;
-        padding: 10px 22px;
+        padding: 15px 22px;
         font-size: 16px;
         cursor: pointer;
         transition: all 0.2s linear;
@@ -49,6 +49,10 @@
         @media (max-width: $breakpoint-md) {
             width: 50%;
             margin: 0 auto;
+        }
+
+        @media (max-width: $breakpoint-sm) {
+            padding: 7px 22px;
         }
 
         @media (max-width: $breakpoint-xs) {
